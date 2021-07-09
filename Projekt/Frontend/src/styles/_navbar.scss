@@ -1,0 +1,85 @@
+@import 'colors';
+@import 'media-queries';
+.navbar {
+  background: $light;
+  display: flex;
+  padding: 0.5rem;
+  position: relative;
+  margin-top: 0;
+  &__logo {
+    color: $dark;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-left: 24px;
+    &:hover {
+      color: $lightlime;
+      transition: all 0.3s ease;
+    }
+    @include tablet {
+      font-size: 1.5rem;
+      margin-left: 5px;
+    }
+  }
+  &__menu {
+    list-style: none;
+    text-align: center;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    input {
+      font-size: 1rem;
+      color: $dark;
+      font-weight: 700;
+      padding: 0.1rem;
+      box-shadow:0 0 15px 4px $semiLight;
+      border-color: $semiLight;
+      border-radius: 0.5rem;
+      @include tablet {
+        font-size: 0.5rem;
+        width: 100%;
+      }
+    }
+    select{
+      border-radius: 2rem;
+      padding-left: 0.3rem;
+      @include tablet {
+        font-size: 0.5rem;
+      }
+    }
+    &--links {
+      color: $dark;
+      justify-content: center;
+      text-decoration: none;
+      padding: 0 1rem;
+      font-size: 1rem;
+      &:hover {
+        color: $lime;
+        transition: all 0.3s ease;
+      }
+      @include tablet {
+        font-size: 0.5rem;
+        padding: 0 0.5rem;
+      }
+    }
+
+    #button {
+      padding: 5px 5px;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+      background: $lime;
+      color: $light;
+
+      &:hover {
+        background: $orangeRed;
+        transition: all 0.3s ease;
+      }
+
+      @include tablet {
+        margin-left: auto;
+        order: 2;
+      }
+    }
+  }
+}
